@@ -4,6 +4,7 @@ source $ZSHA_BASE/antigen/antigen.zsh
 antigen-lib
 antigen-bundle git
 antigen-bundle osx
+antigen-bundle vagrant
 antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle $ZSHA_BASE/bundles/stv
