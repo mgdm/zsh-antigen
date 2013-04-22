@@ -13,3 +13,5 @@ antigen-apply
 
 export CDPATH=$CDPATH:$HOME/Sites:$HOME
 export PATH=$PATH:/opt/homebrew/bin
+export VMWWW=/Volumes/www/html
+export VMPHP=/Volumes/www/phpapps
