@@ -5,6 +5,7 @@ antigen-lib
 antigen-bundle git
 antigen-bundle osx
 antigen-bundle zsh-users/zsh-syntax-highlighting
+antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle $ZSHA_BASE/bundles/stv
 
 antigen-theme $ZSHA_BASE/themes/mgdm/mgdm.zsh-theme
