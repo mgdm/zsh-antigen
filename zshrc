@@ -14,6 +14,14 @@ antigen-theme $ZSHA_BASE/themes/mgdm/mgdm.zsh-theme
 antigen-apply
 
 export CDPATH=$CDPATH:$HOME/Sites:$HOME
-export PATH=$PATH:/opt/homebrew/bin
+export PATH=$HOME/.rbenv/bin:$HOME/bin:/opt/homebrew/bin:$PATH
 export VMWWW=/Volumes/www/html
 export VMPHP=/Volumes/www/phpapps
+
+if [ -d $HOME/.rbenv ]; then
+	eval "$(rbenv init -)"
+fi
+
+if [ -d $HOME/.phpbrew ]; then
+	source $HOME/.phpbrew/bashrc
+fi
