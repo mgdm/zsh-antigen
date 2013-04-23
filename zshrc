@@ -17,6 +17,7 @@ export CDPATH=$CDPATH:$HOME/Sites:$HOME
 export PATH=$HOME/.rbenv/bin:$HOME/bin:/opt/homebrew/bin:$PATH
 export VMWWW=/Volumes/www/html
 export VMPHP=/Volumes/www/phpapps
+export EDITOR=vim
 
 if [ -d $HOME/.rbenv ]; then
 	eval "$(rbenv init -)"
