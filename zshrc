@@ -3,7 +3,11 @@ source $ZSHA_BASE/antigen/antigen.zsh
 
 antigen-lib
 antigen-bundle git
-antigen-bundle osx
+
+if [ "$OSTYPE"="darwin11.0" ]; then
+	antigen-bundle osx
+fi
+
 antigen-bundle vagrant
 antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle zsh-users/zsh-history-substring-search

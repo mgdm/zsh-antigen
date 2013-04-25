@@ -1,9 +1,15 @@
 function stv_app_name {
+	if [[ "$OSTYPE" =~ "^darwin" ]]; then
+		sedopts='En'
+	else
+		sedopts='rn'
+	fi
+
 	echo $PWD | grep 'globals_codeigniter' > /dev/null
 	if [ $? -eq 0 ]; then
 		echo globals
 	else
-		echo $PWD | sed -E -n 's/.*(:?Sites|phpapps)\/([^/]*)\.stv\.tv.*/\2/p'
+		echo $PWD | sed -$sedopts -e 's/.*(:?Sites|phpapps)\/([^/]*)\.stv\.tv.*/\2/p'
 	fi
 }
 
