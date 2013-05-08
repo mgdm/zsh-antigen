@@ -30,3 +30,10 @@ fi
 if [ -d $HOME/.phpbrew ]; then
 	source $HOME/.phpbrew/bashrc
 fi
+
+alias pretty='pygmentize -g -O encoding=utf-8'
+
+if [ -f /opt/homebrew/bin/src-hilite-lesspipe.sh ]; then
+export LESSOPEN="| /opt/homebrew/bin/src-hilite-lesspipe.sh %s"
+export LESS=' -R '
+fi
