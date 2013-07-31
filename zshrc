@@ -1,7 +1,7 @@
 ZSHA_BASE=$HOME/.zsh-antigen
 source $ZSHA_BASE/antigen/antigen.zsh
 
-antigen-lib
+antigen-use oh-my-zsh
 antigen-bundle git
 
 if [ "$OSTYPE"="darwin11.0" ]; then
@@ -11,6 +11,7 @@ fi
 antigen-bundle vagrant
 antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle zsh-users/zsh-history-substring-search
+antigen-bundle $ZSHA_BASE/bundles/git-completion
 antigen-bundle $ZSHA_BASE/bundles/stv
 
 antigen-theme $ZSHA_BASE/themes/mgdm/mgdm.zsh-theme
@@ -18,7 +19,7 @@ antigen-theme $ZSHA_BASE/themes/mgdm/mgdm.zsh-theme
 antigen-apply
 
 export CDPATH=$CDPATH:$HOME/Sites:$HOME
-export PATH=$HOME/.rbenv/bin:$HOME/bin:/opt/homebrew/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$HOME/bin:/opt/homebrew/bin:/usr/local/mysql/bin:$PATH
 export VMWWW=/Volumes/www/html
 export VMPHP=/Volumes/www/phpapps
 export EDITOR=vim
