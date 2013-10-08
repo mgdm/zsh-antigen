@@ -13,13 +13,14 @@ antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle $ZSHA_BASE/bundles/git-completion
 antigen-bundle $ZSHA_BASE/bundles/stv
+antigen-bundle $ZSHA_BASE/bundles/virtualenv
 
 antigen-theme $ZSHA_BASE/themes/mgdm/mgdm.zsh-theme
 
 antigen-apply
 
 export CDPATH=$CDPATH:$HOME/Sites:$HOME
-export PATH=$HOME/.rbenv/bin:$HOME/bin:/opt/homebrew/bin:/usr/local/mysql/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$HOME/bin:/opt/homebrew/bin:$HOME/.composer/vendor/bin:/usr/local/mysql/bin:$PATH
 export VMWWW=/Volumes/www/html
 export VMPHP=/Volumes/www/phpapps
 export EDITOR=vim
