@@ -11,13 +11,13 @@ RPS1=' ${return_code} $(virtualenv_detect_prompt) $(stv_prompt) $(git_prompt_inf
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}git:%{$fg_bold[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[blue]%}%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✗%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}✔%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_no_bold[red]%}✗%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg_no_bold[green]%}✔%{$reset_color%}"
 
 ZSH_THEME_SVN_PROMPT_PREFIX="%{$fg[blue]%}svn:%{$fg_bold[cyan]%}"
 ZSH_THEME_SVN_PROMPT_SUFFIX="%{$fg[blue]%}%{$reset_color%}"
-ZSH_THEME_SVN_PROMPT_DIRTY=" %{$fg[red]%}✗%{$reset_color%}"
-ZSH_THEME_SVN_PROMPT_CLEAN=" %{$fg[green]%}✔%{$reset_color%}"
+ZSH_THEME_SVN_PROMPT_DIRTY=" %{$fg_no_bold[red]%}✗%{$reset_color%}"
+ZSH_THEME_SVN_PROMPT_CLEAN=" %{$fg_no_bold[green]%}✔%{$reset_color%}"
 
 ZSH_THEME_STV_APP_PREFIX="%{$fg[blue]%}stv:%{$fg[yellow]%}"
 ZSH_THEME_STV_APP_SUFFIX="%{$reset_color%}"
