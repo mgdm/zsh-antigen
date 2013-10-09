@@ -14,5 +14,9 @@ function stv_app_name {
 }
 
 function stv_prompt {
-	echo $ZSH_THEME_STV_APP_PREFIX$(stv_app_name)$ZSH_THEME_STV_APP_SUFFIX
+	appName=$(stv_app_name)
+
+	if [ "x$appName" != "x" ]; then
+		echo $ZSH_THEME_STV_APP_PREFIX$(stv_app_name)$ZSH_THEME_STV_APP_SUFFIX
+	fi
 }
