@@ -3,16 +3,16 @@ then CARETCOLOR="red"
 else CARETCOLOR="white"
 fi
 
-local host_colour=0
+host_color=0
 local i=1
 for val in $(echo $HOST | od -A n -t dC); do
-	host_colour=$(($host_colour + $i * $val))
+	host_color=$(($host_color + $i * $val))
 done
-host_colour=$((30 + $host_colour % 8))
+host_color=$(($host_color % 8))
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
-PROMPT='%{${fg[blue]}%}${USER}%{$reset_color%}@%F{$host_colour}%m%{$reset_color%}:%{${fg[blue]}%}%1d%{${fg_bold[$CARETCOLOR]}%}%#%{${reset_color}%} '
+PROMPT='%{${fg[blue]}%}${USER}%{$reset_color%}@%F{$host_color}%m%{$reset_color%}:%{${fg[blue]}%}%1d%{${fg_bold[$CARETCOLOR]}%}%#%{${reset_color}%} '
 
 RPS1=' ${return_code} $(virtualenv_detect_prompt) $(stv_prompt) $(git_prompt_info) %D{%H:%M:%S}'
 
