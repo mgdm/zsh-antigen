@@ -8,7 +8,7 @@ local i=1
 for val in $(echo $HOST | od -A n -t dC); do
 	host_color=$(($host_color + $i * $val))
 done
-host_color=$(($host_color % 8))
+host_color=$((1 + $host_color % 7))
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
