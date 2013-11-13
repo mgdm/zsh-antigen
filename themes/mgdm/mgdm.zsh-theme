@@ -7,6 +7,7 @@ host_color=0
 local i=1
 for val in $(echo $HOST | od -A n -t dC); do
 	host_color=$(($host_color + $i * $val))
+	i=$((i + 1))
 done
 host_color=$((1 + $host_color % 7))
 
