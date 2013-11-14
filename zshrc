@@ -33,6 +33,11 @@ if [ -d $HOME/.phpbrew ]; then
 	source $HOME/.phpbrew/bashrc
 fi
 
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+	source /usr/local/bin/virtualenvwrapper.sh
+	export WORKON_HOME=$HOME/Code/VirtualEnvs
+fi
+
 alias pretty='pygmentize -g -O encoding=utf-8'
 
 if [ -f /opt/homebrew/bin/src-hilite-lesspipe.sh ]; then
