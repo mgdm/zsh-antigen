@@ -11,7 +11,7 @@ for val in $(echo $HOST | od -A n -t dC); do
 done
 host_color=$((1 + $host_color % 7))
 
-local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 PROMPT='%{${fg[blue]}%}${USER}%{$reset_color%}@%F{$host_color}%m%{$reset_color%}:%{${fg[blue]}%}%1~%{${fg_bold[$CARETCOLOR]}%}%#%{${reset_color}%} '
 
