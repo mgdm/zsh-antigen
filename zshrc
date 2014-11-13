@@ -8,12 +8,9 @@ if [ "$OSTYPE"="darwin11.0" ]; then
 	antigen-bundle osx
 fi
 
-antigen-bundle vagrant
-antigen-bundle zsh-users/zsh-syntax-highlighting
-antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle $ZSHA_BASE/bundles/git-completion
 antigen-bundle $ZSHA_BASE/bundles/stv
-antigen-bundle $ZSHA_BASE/bundles/virtualenv
+#antigen-bundle $ZSHA_BASE/bundles/virtualenv
 
 antigen-theme $ZSHA_BASE/themes/mgdm/mgdm.zsh-theme
 
@@ -39,6 +36,7 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 fi
 
 alias pretty='pygmentize -g -O encoding=utf-8'
+alias glp="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 if [ -f /opt/homebrew/bin/src-hilite-lesspipe.sh ]; then
 export LESSOPEN="| /opt/homebrew/bin/src-hilite-lesspipe.sh %s"
