@@ -8,6 +8,8 @@ if [ "$OSTYPE"="darwin11.0" ]; then
 	antigen-bundle osx
 fi
 
+antigen-bundle zsh-users/zsh-syntax-highlighting
+antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle $ZSHA_BASE/bundles/git-completion
 antigen-bundle $ZSHA_BASE/bundles/stv
 #antigen-bundle $ZSHA_BASE/bundles/virtualenv
