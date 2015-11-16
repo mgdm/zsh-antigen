@@ -14,7 +14,7 @@ antigen-bundle $ZSHA_BASE/bundles/git-completion
 antigen-bundle $ZSHA_BASE/bundles/stv
 #antigen-bundle $ZSHA_BASE/bundles/virtualenv
 
-antigen-theme $ZSHA_BASE/themes/mgdm/mgdm.zsh-theme
+antigen-theme $ZSHA_BASE/themes mgdm
 
 antigen-apply
 
