@@ -15,7 +15,7 @@ return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 PROMPT='%{${fg[blue]}%}${USER}%{$reset_color%}@%F{$host_color}%m%{$reset_color%}:%{${fg[blue]}%}%1~%{${fg_bold[$CARETCOLOR]}%}%#%{${reset_color}%} '
 
-RPS1='${return_code} $(stv_prompt) $(git_prompt_info)'
+RPS1='${return_code}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}git:%{$fg_bold[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[blue]%}%{$reset_color%}"
